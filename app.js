@@ -9,7 +9,7 @@ var path = require('path');
 var request = require('request');
 var routes = require('./routes');
 var activity = require('./routes/activity');
-var sfmc = require('./routes/sfmc');
+// var sfmc = require('./routes/sfmc');
 
 var app = express();
 
@@ -35,7 +35,7 @@ app.post('/journeybuilder/publish/', activity.publish);
 app.post('/journeybuilder/execute/', activity.execute);
 
 
-app.post('/sfmc/login/', sfmc.login);
+// app.post('/sfmc/login/', sfmc.login);
 
 http.createServer(app).listen(app.get('port'), function () {
   console.log('Express server listening on port ' + app.get('port'));
