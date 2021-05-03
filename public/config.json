@@ -8,11 +8,11 @@
   "type": "REST",
   "lang": {
     "en-US": {
-      "name": "Honda Connect - Configurações de PUSH notication",
+      "name": "Honda Connect - PUSH notication",
       "description": "Envio de notificações PUSH"
     },
     "pt-BR": {
-      "name": "Honda Connect - Configurações de PUSH notication",
+      "name": "Honda Connect - PUSH notication",
       "description": "Envio de notificações PUSH"
     }
   },
@@ -54,7 +54,7 @@
   },
   "wizardSteps": [
     {
-      "label": "Configure HSM Template",
+      "label": "Configurações de PUSH notication",
       "key": "step1"
     }
   ],
