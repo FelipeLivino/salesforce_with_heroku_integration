@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<title>Salesforce Whatsapp Component - XP Inc</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" type="image/png" href="images/push_60.png" />
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="js/jquery.min.js"></script>
+	<script data-main="js/main.js" type="text/javascript" src="js/require.js"></script>
+</head>
+
+<body>
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="header" data-tilt>
+					<img src="images/hondalogo.svg" alt="IMG">
+				</div>
+
+				<div class="title">
+					<h3>Honda Connect - Configurações de PUSH notication</h3>
+				</div>
+				<div>
+					<form class="form">
+						
+
+						<div class="row" data-validate="O template é obrigatório">
+							<div class="label">
+								<label for="templateCode">Código da BU </label>
+							</div>
+							<div class="input">
+								<input class="input100" type="text" id="templateCode"/>
+							</div>
+						</div>
+
+						<div class="row" data-validate="O template é obrigatório">
+							<div class="label">
+								<label for="dataExtensionName">Nome da DataExtension</label>
+							</div>
+							<div class="input">
+								<input class="input100" type="text" id="dataExtensionName"/>
+							</div>							
+						</div>
+						<div class="row" data-validate="O template é obrigatório">
+							<div class="label">
+								<label for="BuField">Campos BU (separado por vírgula)</label>
+							</div>
+							<div class="input">
+								<input class="input100" type="text" id="BuField"/>
+							</div>							
+						</div>
+
+						<div class="row" data-validate="O template é obrigatório">
+							<div class="label">
+								<label for="isRecall">Recall?</label>
+							</div>
+							<div class="input">
+								<input class="input100" type="checkbox" id="isRecall"/>
+							</div>
+						</div>
+
+						<div class="row" data-validate="O template é obrigatório">
+							<div class="label">
+								<label for="subject">Assunto</label>
+							</div>
+							<div class="input">
+								<input class="input100" type="text" id="subject"/>
+							</div>
+						</div>
+
+						<div class="row" data-validate="O template é obrigatório">
+							<div class="label">
+								<label for="body">Corpo da mensagem</label>
+							</div>
+							<div class="input">
+								<input class="input100" type="text" id="body"/>
+							</div>
+						</div>
+
+						<div class="row" data-validate="O template é obrigatório">
+							<div class="label">
+								<label for="htmlText">html</label>
+							</div>
+							<div class="input">
+								<textarea class="input100" type="text" id="htmlText" rows="10" cols="50"></textarea>
+							</div>
+						</div>
+						
+
+						<div class="row">
+							<div class="button">
+								<button id="toggleActive" class="login100-form-btn">
+									Ativar
+								</button>
+							</div>
+						</div>
+
+					
+					</form>
+				</div>	
+			</div>
+		</div>
+	</div>
+
+	
+
+</body>
+
+</html>

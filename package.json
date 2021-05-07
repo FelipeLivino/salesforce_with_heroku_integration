@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Salesforce MarketCloud Custom Activity",
   "engines": {
-    "node": "14.16.1"
+    "node": "16.1.1"
   },
   "scripts": {
-    "start": "node app.js"
+    "start": "node src/app.js"
   },
   "repository": {
     "type": "git",
@@ -32,10 +32,6 @@
     "errorhandler": "^1.5.0",
     "express": "^4.15.4",
     "jsonwebtoken": "^8.0.1",
-    "request": "^2.81.0",
-    "require": "^2.4.20"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
+    "request": "^2.81.0"
   }
 }
