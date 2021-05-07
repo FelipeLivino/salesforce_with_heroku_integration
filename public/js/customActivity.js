@@ -138,6 +138,7 @@ define(function (require) {
     }
 
     function save() {
+        console.log('### parameterList ',parameterList);
         var parameters = parameterList.split(';');
         parameters = parameters.map(parameterName => `{{Event.${eventDefinitionKey}.\"${parameterName}\"}}`);
 
