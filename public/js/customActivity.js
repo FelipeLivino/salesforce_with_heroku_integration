@@ -133,7 +133,7 @@ define(function (require) {
             eventDefinitionKey = settings.triggers[0].metaData.eventDefinitionKey;
             document.getElementById('select-entryevent-defkey').value = eventDefinitionKey;
         } catch (err) {
-            console.error('### requestedInteractionHandler eventDefinitionKey', settings.triggers[0].metaData.eventDefinitionKey);
+            console.error(settings.triggers[0].metaData.eventDefinitionKey);
             console.error(err);
         }
     }
