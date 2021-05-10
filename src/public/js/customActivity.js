@@ -86,22 +86,22 @@ define(function (require) {
                 templateCode = $('#templateCode').val();
 
                 document.getElementById('dataExtensionName').disabled = true;
-                templateCode = $('#dataExtensionName').val();
+                dataExtensionName = $('#dataExtensionName').val();
 
                 document.getElementById('BuField').disabled = true;
-                templateCode = $('#BuField').val();
+                BuField = $('#BuField').val();
 
                 document.getElementById('isRecall').disabled = true;
-                templateCode = $('#isRecall').val();
+                isRecall = $('#isRecall').val();
 
                 document.getElementById('subject').disabled = true;
-                templateCode = $('#subject').val();
+                subject = $('#subject').val();
 
                 document.getElementById('body').disabled = true;
-                templateCode = $('#body').val();
+                body = $('#body').val();
 
                 document.getElementById('htmlText').disabled = true;
-                templateCode = $('#htmlText').val();
+                htmlText = $('#htmlText').val();
 
                 // document.getElementById('phoneFieldName').disabled = true;
                 // phoneFieldName = $('#phoneFieldName').val();
