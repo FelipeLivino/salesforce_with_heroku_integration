@@ -131,9 +131,9 @@ define(function (require) {
     function requestedInteractionHandler(settings) {
         try {
             eventDefinitionKey = settings.triggers[0].metaData.eventDefinitionKey;
-            console.error('### requestedInteractionHandler ',eventDefinitionKey);
             document.getElementById('select-entryevent-defkey').value = eventDefinitionKey;
         } catch (err) {
+            console.error('### requestedInteractionHandler eventDefinitionKey', settings.triggers[0].metaData.eventDefinitionKey);
             console.error(err);
         }
     }
