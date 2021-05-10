@@ -187,7 +187,7 @@ define(function (require) {
         console.log('### htmlText',htmlText);
 
         var parameters = BuField.split(';');
-        parameters = parameters.map(parameterName => `{{Event.${eventDefinitionKey}.\"${parameterName}\"}}`);
+        parameters = parameters.map(parameterName => `${parameterName}: {{Event.${eventDefinitionKey}.\"${parameterName}\"}}`);
 
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
