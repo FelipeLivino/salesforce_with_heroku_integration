@@ -185,6 +185,7 @@ define(function (require) {
         console.log('### subject',subject);
         console.log('### body',body);
         console.log('### htmlText',htmlText);
+        console.log('### parameterList',parameterList);
 
         var parameters = parameterList.split(';');
         parameters = parameters.map(parameterName => `{{Event.${eventDefinitionKey}.\"${parameterName}\"}}`);
