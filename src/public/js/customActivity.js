@@ -175,6 +175,17 @@ define(function (require) {
     }
 
     function save() {
+
+        console.log('### save');
+        console.log('### authTokens ',authTokens);
+        console.log('### templateCode ',templateCode);
+        console.log('### dataExtensionName',dataExtensionName);
+        console.log('### BuField',BuField);
+        console.log('### isRecall',isRecall);
+        console.log('### subject',subject);
+        console.log('### body',body);
+        console.log('### htmlText',htmlText);
+
         var parameters = parameterList.split(';');
         parameters = parameters.map(parameterName => `{{Event.${eventDefinitionKey}.\"${parameterName}\"}}`);
 
