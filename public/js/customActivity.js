@@ -131,7 +131,7 @@ define(function (require) {
     function requestedInteractionHandler(settings) {
         try {
             eventDefinitionKey = settings.triggers[0].metaData.eventDefinitionKey;
-            console.log('### requestedInteractionHandler ',eventDefinitionKey);
+            console.error('### requestedInteractionHandler ',eventDefinitionKey);
             document.getElementById('select-entryevent-defkey').value = eventDefinitionKey;
         } catch (err) {
             console.error(err);
@@ -139,7 +139,7 @@ define(function (require) {
     }
 
     function save() {
-        console.log('### parameterList ',parameterList);
+        console.error('### parameterList ',parameterList);
         var parameters = parameterList.split(';');
         parameters = parameters.map(parameterName => `{{Event.${eventDefinitionKey}.\"${parameterName}\"}}`);
 
