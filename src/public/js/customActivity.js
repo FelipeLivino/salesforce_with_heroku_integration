@@ -191,9 +191,9 @@ define(function (require) {
 
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
-            "templateName": templateCode,
+            "mid": templateCode,
             "dataExtensionName": dataExtensionName,
-            "BuField": BuField,
+            "buField": BuField,
             "isRecall": isRecall,
             "subject": subject,
             "body": body, 

@@ -60,7 +60,7 @@ exports.save = function (req, res) {
 };
 
 exports.execute = function (req, res) {
-    logData(req);
+    // logData(req);
     JWT(req.body, process.env.jwtSecret, (err, decoded) => {
         if (err) {
             console.error(err);
@@ -74,15 +74,25 @@ exports.execute = function (req, res) {
             console.log('inArguments', JSON.stringify(decoded.inArguments));
             console.log('decodedArgs', JSON.stringify(decodedArgs));
 
-            const templateName = decodedArgs['templateName'];
-            const phoneNumber = decodedArgs['phoneNumber'];
+            const mid = decodedArgs['mid'];
+            const dataExtensionName = decodedArgs['dataExtensionName'];
+            const buField = decodedArgs['buField'];
+            const isRecall = decodedArgs['isRecall'];
+            const subject = decodedArgs['subject'];
+            const body = decodedArgs['body'];
+            const htmlText = decodedArgs['htmlText'];
+            const contactIdentifier = decodedArgs['contactIdentifier'];
             const parameters = decodedArgs['parameters'];
-            const account = decodedArgs['account'];
 
-            console.log('templateName', templateName);
-            console.log('phoneNumber', phoneNumber);
+            console.log('mid', mid); 
+            console.log('dataExtensionName', dataExtensionName);
+            console.log('buField', buField);
+            console.log('isRecall', isRecall);
+            console.log('subject', subject);
+            console.log('body', body);
+            console.log('htmlText', htmlText);
+            console.log('contactIdentifier', contactIdentifier);
             console.log('parameters', parameters);
-            console.log('account', account);
 
 
             res.send(200, 'Execute');
