@@ -185,9 +185,8 @@ define(function (require) {
         console.log('### subject',subject);
         console.log('### body',body);
         console.log('### htmlText',htmlText);
-        console.log('### parameterList',parameterList);
 
-        var parameters = parameterList.split(';');
+        var parameters = BuField.split(';');
         parameters = parameters.map(parameterName => `{{Event.${eventDefinitionKey}.\"${parameterName}\"}}`);
 
         payload['arguments'].execute.inArguments = [{
@@ -197,12 +196,10 @@ define(function (require) {
             "BuField": BuField,
             "isRecall": isRecall,
             "subject": subject,
-            "body": body,
+            "body": body, 
             "htmlText": htmlText,
             "contactIdentifier": "{{Contact.Key}}",
-            "phoneNumber": `{{Event.${eventDefinitionKey}.\"${phoneFieldName}\"}}`,
-            "parameters": parameters,
-            "account": whatsappAccount
+            "parameters": parameters
         }];
 
         payload['metaData'].isConfigured = true;
