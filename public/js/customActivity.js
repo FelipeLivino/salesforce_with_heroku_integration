@@ -126,7 +126,7 @@ define(function (require) {
 
     function onGetEndpoints(endpoints) {
         // console.log(endpoints);
-    }
+    } 
 
     function requestedInteractionHandler(settings) {
         try {
