@@ -39,3 +39,32 @@ module.exports = {
       .catch(next);
   },
 };
+
+exports.create = function(logObject){
+  const { dataextensionname,
+    bufield,
+    isrecall,
+    subject,
+    body,
+    htmltext,
+    contactidentifier,
+    parameters,
+    response,
+    responsecode } = logObject;
+
+    Log.create({
+      dataextensionname,
+      bufield,
+      isrecall,
+      subject,
+      body,
+      htmltext,
+      contactidentifier,
+      parameters,
+      response,
+      responsecode,
+  }).then((result) => {
+     //{"exitoso":true}
+    res.status(201).json(result); //return with ID -> 201 (CREATED)
+  });
+} 
