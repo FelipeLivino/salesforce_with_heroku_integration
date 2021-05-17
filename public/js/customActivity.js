@@ -187,7 +187,11 @@ define(function (require) {
         console.log('### htmlText',htmlText);
 
         var parameters = BuField.split(';');
-        parameters = parameters.map(parameterName => `${parameterName}: {{Event.${eventDefinitionKey}.\"${parameterName}\"}}`);
+        // parameters = parameters.map(parameterName => `${parameterName}: {{Event.${eventDefinitionKey}.\"${parameterName}\"}}`);
+        var objectData = {};
+        parameters.forEach((element) => {
+            objectData[element] = `{{Event.${eventDefinitionKey}.\"${element}\"}}`;
+        });
 
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
@@ -199,7 +203,7 @@ define(function (require) {
             "body": body, 
             "htmlText": htmlText,
             "contactIdentifier": "{{Contact.Key}}",
-            "parameters": parameters
+            "parameters": objectData
         }];
 
         payload['metaData'].isConfigured = true;
