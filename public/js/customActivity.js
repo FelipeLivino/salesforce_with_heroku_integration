@@ -206,6 +206,6 @@ define(function (require) {
 
         // console.log('payload', JSON.stringify(payload));
 
-        connection.trigger('updateActivity', payload);
+        connection.trigger('updateActivity', payload); 
     }
 });
