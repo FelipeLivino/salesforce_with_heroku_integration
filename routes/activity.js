@@ -96,7 +96,7 @@ exports.execute = function (req, res) {
 
 
             // res.send(201, 'Execute');
-            res.send(401,{"exitoso":false});
+            res.send(401,{"success":false});
         } else {
             console.error('inArguments invalid.');
             return res.status(401).end();
