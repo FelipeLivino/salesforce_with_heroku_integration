@@ -204,7 +204,7 @@ define(function (require) {
             "htmlText": htmlText,
             "contactIdentifier": "{{Contact.Key}}",
             "parameters": objectData
-        }];
+        }]; 
 
         payload['metaData'].isConfigured = true;
 
