@@ -8,6 +8,7 @@ var http = require('http');
 var path = require('path');
 var routes = require('./routes');
 var activity = require('./routes/activity');
+var rts = require('./routes/rts');
 const LogController = require('./controllers/Logs');
 
 var app = express(); 
@@ -37,6 +38,7 @@ app.post('/journeybuilder/execute', activity.execute);
 app.get("/log", LogController.all);
 app.post("/log", LogController.create);
 
+app.post("/rts/login", rts.login);
 
 http.createServer(app).listen(app.get('port'), function () {
   console.log('Express server listening on port ' + app.get('port'));
