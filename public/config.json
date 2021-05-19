@@ -29,9 +29,7 @@
       "timeout": 10000
     }
   },
-  "key": "f300036b-e138-40df-8058-09b754bb4b3a",
   "configurationArguments": {
-    "applicationExtensionKey": "f300036b-e138-40df-8058-09b754bb4b3a",
     "save": {
       "url": "https://newsfacd.herokuapp.com/journeybuilder/save",
       "verb": "POST",

@@ -30,9 +30,9 @@ function loginRts3(){
     key.pop();
 
     var options = {
-        url: 'https://api.honda.com.br/dev/rts/v1/login',
+        url: process.env.RTS_URL,
         headers: {
-            'Authorization': 'Basic NGtqNGFvb2R0NmU4YTlvZHJoYW5vcG1hNG86a2VhNWd0bWNoMzhuNmNzZWV1NmsxNXVnMnZtbmFnMDU3bGJzZXJqaG82cGE2aWE2cjBz',
+            'Authorization': 'Basic '+process.env.RTS_Authorization,
             'Content-Type': 'application/x-www-form-urlencoded'
         },
         agentOptions: {
