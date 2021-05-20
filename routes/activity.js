@@ -48,15 +48,21 @@ function logData(req) {
 }
 
 exports.edit = function (req, res) {
-    console.log('edit request');
-    // logData(req);
-    res.send(200, 'Edit');
+    JWT(req.body, process.env.jwtSecret, (err, decoded) => {
+        if (err) 
+            return res.status(401).end();
+        else
+            return res.send(200, 'Edit');
+    });    
 };
 
 exports.save = function (req, res) {
-    console.log('save request');
-    // logData(req);
-    res.send(200, 'Save');
+    JWT(req.body, process.env.jwtSecret, (err, decoded) => {
+        if (err) 
+            return res.status(401).end();
+        else
+            return res.send(200, 'Save');
+    });  
 };
 
 exports.execute = function (req, res) {
@@ -106,15 +112,21 @@ exports.execute = function (req, res) {
 };
 
 exports.publish = function (req, res) {
-    console.log('publish request');
-    // logData(req);
-    res.send(200, 'Publish');
+    JWT(req.body, process.env.jwtSecret, (err, decoded) => {
+        if (err) 
+            return res.status(401).end();
+        else
+            return res.send(200, 'Publish');
+    });  
 };
 
 exports.validate = function (req, res) {
-    console.log('validate request');
-    // logData(req);
-    res.send(200, 'Validate');
+    JWT(req.body, process.env.jwtSecret, (err, decoded) => {
+        if (err) 
+            return res.status(401).end();
+        else
+            return res.send(200, 'Validate');
+    });  
 };
 
 function uuidv4() {

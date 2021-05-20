@@ -24,15 +24,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 if ('development' == app.get('env')) {
   app.use(errorhandler());
 }
+
+const midleware = (request,response, next) =>{
+  console.log('request.connection.remoteAddress',request.connection.remoteAddress);
+  next();
+} 
  
 app.get('/', routes.index);
 app.post('/login', routes.login);
 app.post('/logout', routes.logout);
 
-app.post('/journeybuilder/save', activity.save);
-app.post('/journeybuilder/validate', activity.validate);
-app.post('/journeybuilder/publish', activity.publish);
-app.post('/journeybuilder/execute', activity.execute);
+app.post('/journeybuilder/save', midleware, activity.save);
+app.post('/journeybuilder/validate', midleware, activity.validate);
+app.post('/journeybuilder/publish', midleware, activity.publish);
+app.post('/journeybuilder/execute', midleware, activity.execute);
 
 
 app.get("/log", LogController.all);
