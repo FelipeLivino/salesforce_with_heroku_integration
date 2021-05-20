@@ -27,6 +27,7 @@ if ('development' == app.get('env')) {
 
 const midleware = (request,response, next) =>{
   console.log('request.connection.remoteAddress',request.connection.remoteAddress);
+  console.log('request.connection',request.connection);
   next();
 } 
  
