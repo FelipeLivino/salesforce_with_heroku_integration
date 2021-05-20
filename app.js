@@ -26,8 +26,8 @@ if ('development' == app.get('env')) {
 }
 
 const midleware = (request,response, next) =>{
-  console.log('request.connection.remoteAddress',request.connection.remoteAddress);
-  console.log('request.connection',request.connection);
+  var fullUrl = request.protocol + '://' + request.get('host') + request.originalUrl;
+  console.log('fullUrl',fullUrl);
   next();
 } 
  
