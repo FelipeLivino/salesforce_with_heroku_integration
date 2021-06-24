@@ -16,3 +16,6 @@ Para executar esse projeto, instale os seguintes softwares no seu sistema operac
 . nodejs v14.15.4 ou superior<br>
 . heroku cli<br>
 <br>
+
+<br>
+Para exeutar em seu computador execute: npm start
